@@ -16,3 +16,67 @@ puts 17 / 5.0 # prints the decimal value
 puts 3.even?
 puts 4.even?
 puts 7.odd?
+
+#==========================#
+#       STRINGS
+#==========================#
+# Concatenation
+# 1. Using the plus operator
+puts "Welcome " + "to" + " the Odin project"
+
+# 2. Using the shovel operator:
+puts "Welcome " << "to" << " the Odin project"
+
+# 3. Using the concat method
+puts "Welcome ".concat("to ").concat("the Odin project")
+
+# Substrings -> Stringception
+puts "hello"[0] # the 1st
+puts "hello"[0..1] # he
+puts "hello"[0, 4] # hell
+puts "hello"[-1] # The last char
+
+# ESCAPE CHARACTERS
+
+# \\  #=> Need a backslash in your string?
+# \b  #=> Backspace
+# \r  #=> Carriage return, for those of you that love typewriters
+# \n  #=> Newline. You'll likely use this one the most.
+# \s  #=> Space
+# \t  #=> Tab
+# \"  #=> Double quotation mark
+# \'  #=> Single quotation mark
+
+# INTERPOLATION -> allows evaluation of a string tha contains placeholder variables.
+# must use "......"
+name = "Osmon"
+puts "Hello, #{name}"
+puts 'Hello, #{name}' # Does not work because of the single quotes
+
+# COMMON STRING METHODS
+# 1. Capitalize
+puts "hello".capitalize
+
+# 2. Include?
+puts "hello".include?("lo") # true
+puts "hello".include?("zz") # false
+
+# 3. Upcase
+puts "hello".upcase # HELLO
+
+# 4. Downcase
+puts "HELLO".downcase
+
+# 5. Empty?
+puts "hello".empty? # false
+puts "".empty? #true
+
+# 6. length
+puts "hello".length
+
+# 7. Reverse
+puts "hello".reverse
+
+# 8. Split
+puts "hello world".split
+puts "Hellow world".split("")
