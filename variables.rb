@@ -80,3 +80,19 @@ puts "hello".reverse
 # 8. Split
 puts "hello world".split
 puts "Hellow world".split("")
+
+# 9. Strip
+puts "   hello, world   ".strip # removes leading and trailing spaces
+
+# More examples
+puts "he77o".gsub("7", "l") # replaces 7 with l
+puts "he77o".gsub("7", "l")
+puts "hello".insert(-1, " world") # inserts " world" before the last character
+puts "hello world".delete("l") # deletes all "l" characters
+puts "!".prepend("hello, ", "world") # prepends "hello, " and "world" to "!"
+
+# CONVERTING OTHER OBJECTS TO STRING
+puts 5.to_s # converts number to string
+puts nil.to_s # converts nil to string
+puts :symbol.to_s # converts symbol to string
+
