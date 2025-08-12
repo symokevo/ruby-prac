@@ -96,3 +96,40 @@ puts 5.to_s # converts number to string
 puts nil.to_s # converts nil to string
 puts :symbol.to_s # converts symbol to string
 
+#==========================#
+#       SYMBOLS
+#==========================#
+
+# Strings vs Symbols
+# Symbols are immutable, unique, and more memory efficient than strings while strings are mutable and can be changed.
+# Symbols are often used as identifiers or keys in hashes.
+
+# Creating a symbol
+my_symbol = :my_symbol
+
+# Accessing a symbol
+puts my_symbol
+
+# Symbols vs Strings
+puts "hello".object_id # Different object id every time
+puts "hello".object_id # Different object id every time
+puts :hello.object_id # Same object id every time
+puts :hello.object_id # Same object id every time
+
+# Common use case for symbols is as keys in hashes
+my_hash = { name: "Osmon", age: 25 }
+puts my_hash[:name] # Accessing value using symbol key
+puts my_hash[:age]  # Accessing value using symbol key
+
+puts "string" == "string" # true, comparing strings
+puts "string".object_id == "string".object_id # false, different object ids for strings
+puts :symbol == :symbol # true, comparing symbols
+puts :symbol.object_id == :symbol.object_id # true, same object ids for symbols
+
+# Symbols are often used in method arguments to represent options or flags
+def example_method(option: :default)
+  puts "Option is: #{option}"
+end
+
+example_method(option: :custom) # Using a symbol as an argument
+example_method # Using the default symbol
