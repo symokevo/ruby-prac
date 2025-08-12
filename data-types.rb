@@ -133,3 +133,10 @@ end
 
 example_method(option: :custom) # Using a symbol as an argument
 example_method # Using the default symbol
+
+#==========================#
+#       BOOLEANS
+#==========================
+
+# Return (true or false) based on the condition
+# NIL: When a piece of code doesn’t have anything to return, it will return nil.
