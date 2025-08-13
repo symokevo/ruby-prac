@@ -186,3 +186,25 @@ else
   puts "Either room is not tidy or 1 is not less than 2."
 end
 
+# Case Statements
+grade = 'F'
+
+did_i_pass = case grade
+  when 'A' then "Hell yeah!"
+  when 'D' then "Don't tell your mother"
+  else "'YOU SHALL NOT PASS! -Gandalf"
+end
+
+puts did_i_pass
+
+case grade
+when 'A'
+  puts "You're a genius"
+  future_bank_account_balance = 5_000_000
+when 'D'
+  puts "Better luck next time"
+  can_i_retire_soon = false
+else
+  puts "'YOU SHALL NOT PASS!' -Gandalf"
+  fml = true
+end
