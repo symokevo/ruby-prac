@@ -208,3 +208,38 @@ else
   puts "'YOU SHALL NOT PASS!' -Gandalf"
   fml = true
 end
+
+# Unless statements
+# Only precesses the code block if the condition is false
+unless room_tidy
+  puts "I need to tidy up first."
+else
+  puts "I can now play the game."
+end
+
+# Using unless with a method
+def tidy_up(room_tidy)
+  unless room_tidy
+    "I need to tidy up first."
+  else
+    "I can now play the game."
+  end
+end
+
+puts tidy_up(room_tidy)
+
+# Using unless with a ternary operator
+puts room_tidy ? "I can now play the game." : "I need to tidy up first."
+
+age = 20
+unless age < 18
+  puts "Get a job"
+end
+#or
+puts "Get a job" unless age < 18
+
+unless age < 18
+  puts "Down with that sort of thing."
+else
+  puts "Careful now!"
+end
