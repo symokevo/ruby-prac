@@ -135,3 +135,54 @@ puts 6 <=> 5 # 1 (6 is greater than 5)
 array = [3, 1, 2]
 sorted_array = array.sort { |a, b| a <=> b }
 puts sorted_array.inspect # [1, 2, 3]
+
+# Logical operators in conditionals
+# and (&&), or (||), not (!)
+
+# && represents logical AND. it returns true if both operands are true.
+puts true && true # true
+puts true && false # false
+
+if 1 < 2 && 5 < 6
+  puts "Party at Osmon's!"
+end
+# or
+if 1 < 2 and 5 < 6
+  puts "Party at Osmon's!"
+end
+
+# || represents logical OR. it returns true if at least one operand is true.
+puts true || false # true
+puts false || false # false
+
+if 10 < 2 || 5 < 6
+  puts "Party at Osmon's!"
+end
+# or
+if 10 < 2 or 5 < 6
+  puts "Party at Osmon's!"
+end
+
+
+# && and || evaluate expressions from left to right and short-circuit.
+# If the first operand of && is false, it won't evaluate the second operand.
+# If the first operand of || is true, it won't evaluate the second operand.
+# ----------------
+
+# Short-circuiting example
+def expensive_operation
+  puts "Expensive operation executed!"
+  true
+end
+
+# ! represents logical NOT. it negates the truth value.
+puts !true # false
+puts !false # true
+
+# Combining logical operators
+if room_tidy && (1 < 2)
+  puts "Room is tidy and 1 is less than 2."
+else
+  puts "Either room is not tidy or 1 is not less than 2."
+end
+
